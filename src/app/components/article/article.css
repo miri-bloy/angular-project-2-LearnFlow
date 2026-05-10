@@ -1,0 +1,48 @@
+.article-card {
+    border-left: 5px solid #e74c3c;
+    background: #fdfdfd;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  
+  .article-card.read-bg {
+    border-left-color: #2ecc71;
+    background-color: #f0fff4;
+  }
+  
+  .btn-read { background-color: #2ecc71; color: white; border: none; padding: 5px 10px; border-radius: 4px; }
+  .btn-unread { background-color: #95a5a6; color: white; border: none; padding: 5px 10px; border-radius: 4px; }
+  
+  .status-badge {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+  .eligible { background-color: #2ecc71; color: white; }
+  .not-eligible { background-color: #e74c3c; color: white; }
+
+  .article-footer {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    gap: 25px;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.btn-read, .btn-unread {
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.btn-read:hover { background-color: #27ae60; }
+.btn-unread:hover { background-color: #7f8c8d; }

@@ -1,0 +1,18 @@
+<div class="profile-container">
+    <div class="profile-header">
+      <h2>{{currentUser()?.name}}</h2>
+      <p class="email">{{currentUser()?.email}}</p>
+      
+      <div [class]="'status-badge ' + (status() === 'Eligible' ? 'eligible' : 'not-eligible')">
+        {{ status() === 'Eligible' ? 'Ready for Course' : 'In Progress' }}
+      </div>
+    </div>
+
+    <nav class="profile-navigation">
+      <a [routerLink]="['articles']" 
+         routerLinkActive="active-tab" 
+         class="tab-button">
+         <span class="icon">📖</span> View Articles List
+      </a>
+    </nav>
+  </div>

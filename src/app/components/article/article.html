@@ -1,0 +1,13 @@
+<div class="article-card" [class.read-bg]="currentArticle().status === 'read'">
+  <h3>{{currentArticle().title}}</h3>
+  <p class="content">{{currentArticle().contex}}</p>
+  
+  <div class="article-footer"> 
+    <span class="status-text">Status: <strong>{{ currentArticle().status }}</strong></span>
+    <button (click)="onUpdateStatus(currentArticle().id)" 
+            [class]="currentArticle().status === 'read' ? 'btn-unread' : 'btn-read'">
+      {{ currentArticle().status === 'read' ? 'Mark as Unread' : 'Mark as Read' }}
+    </button>
+  </div>
+  
+</div>

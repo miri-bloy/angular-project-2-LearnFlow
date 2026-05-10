@@ -1,0 +1,17 @@
+<div class="articles-page-container">
+    <header class="articles-header">
+      <h1>Articles of: <span class="user-name">{{user()?.name}}</span></h1>
+      
+      <div [class]="'global-status ' + (status() === 'Eligible' ? 'eligible' : 'not-eligible')">
+        Overall Status: {{ status() === 'Eligible' ? 'Ready for Course' : 'In Progress' }}
+      </div>
+    </header>
+  
+    <div class="articles-list">
+      @for (articleItem of allArticles(); track articleItem.id) {
+          <app-article [currentArticle]="articleItem"></app-article>
+      } @empty {
+          <p class="empty-msg">No articles found for this user.</p>
+      }
+    </div>
+  </div>

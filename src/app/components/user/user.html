@@ -1,0 +1,7 @@
+<div class="user-card">
+    <h3>{{currentUser().name}}</h3>
+    <p class="email">{{currentUser().email}}</p>
+    <a [routerLink]="['/users', currentUser().id]">
+      <button class="btn-primary">Open Profile</button>
+    </a>
+  </div>
